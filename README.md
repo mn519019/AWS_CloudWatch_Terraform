@@ -1,3 +1,19 @@
+# How to
+- Terraform version 1.7.5 is used
+- You will need to set up a s3 bucket to store s3 bucket
+- You may require SNS to trriger email notification Modify the alarm yaml file as needed. 
+```
+terraform version
+
+# Expected output
+1.7.5
+
+cd deployment/non-prod-monitoring
+terraform init;
+terrafrom plan;
+terraform apply; 
+```
+
 # Basic Monitoring
 - Basic monitoring module is to provision basic alarms. You specify alarm configurations in the yaml file
 - This only deals with maximum two dimensions in the alarm(s). 
