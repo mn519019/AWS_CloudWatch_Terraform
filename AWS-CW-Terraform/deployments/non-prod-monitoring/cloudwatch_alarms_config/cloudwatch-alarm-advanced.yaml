@@ -1,0 +1,36 @@
+alarms:
+##########################
+## Type: RDS          #
+##########################
+  # Memory Utilization in Percentage - DB1
+  - alarm_name: "NONPROD-TEST-ADVANCED"
+    comparison_operator: "GreaterThanOrEqualToThreshold"
+    evaluation_periods: 2
+    threshold: 80 # Percentage
+    alarm_actions: ["arn:aws:sns:ca-central-1:<Account Number>:test-alarm-medium-NONPROD"]
+    actions_enabled: true
+    treat_missing_data: "breaching"
+    alarm_description: |
+      TEST
+      Dashboard URL: Your DashBoard URL
+      Runbook URL: Your Runbook URL
+    expression: "((7851760 - (m1 + m2 + m3)) / 7851760) * 100"
+    label: "Database1_Memory_Utilization"
+    metric_name1: Memory-Free-Kilobytes-DB1
+    namespace1: RDSCustomMetrics
+    period1: 300
+    stat1: "Average"
+    include_m2: true
+    metric_name2: Memory-Buffered-Kilobytes-DB1
+    namespace2: RDSCustomMetrics
+    period2: 300
+    stat2: "Average"
+    include_m3: true
+    metric_name3: Memory-Cached-Kilobytes-DB1
+    namespace3: RDSCustomMetrics
+    period3: 300
+    stat3: "Average"
+    tags:
+      Severity: "P3"
+      Resource: "RDS"
+      Service: "nuatestns-non-prod-instance-1"

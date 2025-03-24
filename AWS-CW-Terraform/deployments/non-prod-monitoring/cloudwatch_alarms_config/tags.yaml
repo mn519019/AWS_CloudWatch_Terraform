@@ -1,0 +1,17 @@
+basic_tags:
+  Type: "basic_alarm"
+  Project: "test"
+  IaC: "Terraform"
+  Environment: "non-prod"
+
+advanced_tags:
+  Type: "advanced_alarm"
+  Project: "test"
+  IaC: "Terraform"
+  Environment: "non-prod"
+
+anomaly_detection_tags:
+  Type: "anomaly_detection_alarm"
+  Project: "test"
+  IaC: "Terraform"
+  Environment: "non-prod"

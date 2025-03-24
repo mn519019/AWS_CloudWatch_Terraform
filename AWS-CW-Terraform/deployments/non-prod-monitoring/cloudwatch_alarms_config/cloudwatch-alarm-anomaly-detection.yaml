@@ -1,0 +1,26 @@
+alarms:
+## TEST ###
+  - alarm_name: "NONPROD-TEST-ANOMALY-DETECTION"
+    comparison_operator: "LessThanLowerOrGreaterThanUpperThreshold"
+    evaluation_periods: 2
+    threshold_metric_id: ad1
+    alarm_actions: ["arn:aws:sns:ca-central-1:<Account Number>:test-alarm-medium-NONPROD"]
+    actions_enabled: true
+    treat_missing_data: "breaching"
+    alarm_description: |
+      TEST
+      Dashboard URL: Your DashBoard URL
+      Runbook URL: Your Runbook URL
+    expression_id: ad1
+    expression: ANOMALY_DETECTION_BAND(m1, 10)
+    label: "WriteIOPS-TEST"
+    metric_name1: WriteIOPS
+    namespace1: AWS/RDS
+    period1: 300
+    stat1: "Average"
+    include_m2: false
+    include_m3: false
+    tags:
+      Severity: "P3"
+      Resource: "TEST"
+      Service: "RDS"
