@@ -1,6 +1,6 @@
 alarms:
 ##########################
-## Type: RDS          #
+## Type: RDS             #
 ##########################
   # Memory Utilization in Percentage - DB1
   - alarm_name: "NONPROD-TEST-ADVANCED"
