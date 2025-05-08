@@ -11,7 +11,7 @@ alarms:
     period: 300
     stat: "Average"
     threshold: 80 # Percentage
-    alarm_actions: ["arn:aws:sns:ca-central-1:<Account Number>:nuans-alarm-medium-NONPROD"]
+    alarm_actions: ["arn:aws:sns:ca-central-1:<Account Number>:test-alarm-medium-NONPROD"]
     alarm_description: |
       TEST
       Dashboard URL: Your DashBoard URL
